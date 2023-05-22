@@ -29,7 +29,7 @@ import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.util.yaap.YaapUtils;
+import com.android.internal.util.yukiprjkt.YukiUtils;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -84,7 +84,7 @@ public class NotificationsSettings extends DashboardFragment implements
             prefScreen.removePreference(incallVibCategory);
         }
 
-        if (!YaapUtils.deviceHasFlashlight(getActivity())) {
+        if (!YukiUtils.deviceHasFlashlight(getActivity())) {
             PreferenceCategory flashOnCallCategory = (PreferenceCategory)
                     findPreference(FLASH_ON_CALL_OPTIONS);
             PreferenceCategory flashOnNotifCategory = (PreferenceCategory)
